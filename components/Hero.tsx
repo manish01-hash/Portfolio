@@ -124,7 +124,7 @@ const Hero: React.FC<HeroProps> = () => {
     <div className="absolute inset-0 rounded-full border-4 border-cyber-primary/20"></div>
     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-cyber-accent/10 bg-gradient-to-br from-cyber-black/40 to-transparent">
       <img
-        src="/image.png"
+        src="/profile pic.jpeg"
         alt={`${PERSONAL_INFO.name} avatar`}
         className="w-full h-full object-cover"
         onError={(e) => (e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(PERSONAL_INFO.name || '')}&background=1a1a1a&color=10b981&size=512`)}
