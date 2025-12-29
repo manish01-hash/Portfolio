@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = () => {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="https://github.com/manish-hash"
+                href="https://github.com/manish01-hash"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center p-3 border border-gray-700 rounded-md text-white bg-gray-800/50 hover:bg-gray-700 transition-colors duration-200"
