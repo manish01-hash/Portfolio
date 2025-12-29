@@ -85,22 +85,29 @@ export const PROJECTS: Project[] = [
   {
     title: "Secure Password Manager",
     role: "Security Engineer & Python Developer",
-    description: "A robust local password management solution focusing on cryptographic integrity. Implemented Argon2 hashing for superior resistance against GPU-based cracking attacks.",
+    description:
+      "A robust local password management solution focusing on cryptographic integrity. Implemented Argon2 hashing for superior resistance against GPU-based cracking attacks.",
     tags: ["Python", "Cryptography", "Argon2", "Security"],
+    githubUrl: "https://github.com/manish01-hash/secure-password-manager",
   },
   {
     title: "Vhub - Event Management System",
     role: "Full Stack Developer",
-    description: "A Role-Based Access Control (RBAC) system for managing events. Designed the architecture to securely handle user permissions, API endpoints, and database transactions.",
+    description:
+      "A Role-Based Access Control (RBAC) system for managing events. Designed the architecture to securely handle user permissions, API endpoints, and database transactions.",
     tags: ["React", "Django", "MySQL", "REST API", "RBAC"],
+    githubUrl: "https://github.com/manish01-hash/Vhub",
   },
   {
-    title: "AutoRoleBot",
+    title: "HackeyeBot",
     role: "Backend Developer",
-    description: "An automated Discord bot designed to manage community roles and permissions dynamically, reducing manual administrative overhead.",
+    description:
+      "An automated Discord bot designed to manage community roles and permissions dynamically, reducing manual administrative overhead.",
     tags: ["Node.js", "Discord API", "Automation", "JavaScript"],
+    githubUrl: "https://github.com/manish01-hash/HackeyeBot", 
   }
 ];
+
 
 export const EDUCATION: Education[] = [
   {
