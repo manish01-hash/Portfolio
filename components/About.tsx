@@ -18,7 +18,7 @@ const About: React.FC = () => {
     {
       icon: <Code2 className="w-6 h-6 text-cyber-primary" />,
       title: "How I Build",
-      description: "I develop small security projects that combine coding, automation, and AI to solve practical cybersecurity challenges. My workflow blends ethical hacking, scripting, and modern tech to create efficient security-focused solutions."
+      description: "I develop security projects that combine coding, automation, and AI to solve practical cybersecurity challenges. My workflow blends ethical hacking, scripting, and modern tech to create efficient security-focused solutions."
     },
     {
       icon: <Rocket className="w-6 h-6 text-cyber-primary" />,
