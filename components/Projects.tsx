@@ -38,9 +38,19 @@ const Projects: React.FC = () => {
                     <Folder className="w-6 h-6 text-cyber-primary" />
                   </div>
                   <div className="flex space-x-3">
-                    {/* Placeholder Links - In a real app, add url to project object */}
-                    <Github className="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition" />
-                  </div>
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${project.title} GitHub Repository`}
+      className="text-gray-500 hover:text-white transition"
+    >
+      <Github className="w-5 h-5" />
+    </a>
+  )}
+</div>
+
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors">
