@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   name: "Manish Dhaygude",
   title: "Cybersecurity Student & Aspiring Security Professional",
   email: "manishdhaygude36@gmail.com",
-  phone: "8767011304",
+  phone: "+918767011304",
   location: "Pune, India",
   tagline: "Building Secure Digital Infrastructure & Mitigating Cyber Threats",
   summary: ""
@@ -149,7 +149,7 @@ export const CERTIFICATES: Certificate[] = [
 export const SOCIAL_LINKS = [
   { 
     name: "GitHub", 
-    url: "https://github.com/manish-hash", 
+    url: "https://github.com/manish01-hash", 
     icon: "github",
     color: "#ffffff"
   },
@@ -179,7 +179,7 @@ export const SOCIAL_LINKS = [
   },
   { 
     name: "Medium", 
-    url: "https://medium.com/@manishdhaygude", 
+    url: "https://medium.com/@manishdhaygude36", 
     icon: "book-open-text",
     color: "#2acf09ff"
   }
