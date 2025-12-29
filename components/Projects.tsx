@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
             </h2>
             <p className="mt-4 text-gray-400">A selection of my work in security and development.</p>
           </div>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hidden md:flex items-center text-cyber-primary hover:text-white transition mt-4 md:mt-0">
+          <a href="https://github.com/manish01-hash" target="_blank" rel="noreferrer" className="hidden md:flex items-center text-cyber-primary hover:text-white transition mt-4 md:mt-0">
             <Github className="w-5 h-5 mr-2" /> View Github Profile
           </a>
         </div>
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-cyber-primary hover:text-white transition">
+            <a href="https://github.com/manish01-hash" target="_blank" rel="noreferrer" className="inline-flex items-center text-cyber-primary hover:text-white transition">
                 <Github className="w-5 h-5 mr-2" /> View Github Profile
             </a>
         </div>
