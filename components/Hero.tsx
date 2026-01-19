@@ -26,8 +26,9 @@ const Hero: React.FC<HeroProps> = () => {
   </div>
 
   {/* Content */}
-  <div className="relative z-10 w-full px-6 lg:px-28 xl:px-36 pt-32">
-    <div className="max-w-3xl">
+  <div className="relative z-10 w-full px-6 sm:px-12 lg:px-24 xl:px-32 pt-32">
+  <div className="w-full lg:max-w-5xl">
+
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
