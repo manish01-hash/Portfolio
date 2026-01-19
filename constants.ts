@@ -51,7 +51,7 @@ export const EXPERIENCE = [
   {
     role: "Cyber Security and Ethical Hacking Intern",
     company: "Concent.ai",
-    period: "Jul 2023 - Aug 2023 · 2 months",
+    period: "Jul 2023 - Aug 2023 · 1 months",
     location: "Virtual • Remote",
     description: [
       "Completed a virtual project-based internship focused on penetration testing and password security",
