@@ -42,7 +42,6 @@ const Hero: React.FC<HeroProps> = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight"
           >
-            <span className="block text-gray-300 mb-2 text-lg sm:text-xl font-mono">Hello, my name is</span>
             <span className="block text-4xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyber-primary via-cyber-accent to-cyber-primary bg-300% animate-gradient font-sans tracking-tighter">
               {PERSONAL_INFO.name}
             </span>
