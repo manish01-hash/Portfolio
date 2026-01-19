@@ -11,40 +11,116 @@ export const PERSONAL_INFO = {
   summary: ""
 };
 
-export const SKILLS: SkillCategory[] = [
+export const SKILLS = [
   {
-    category: "Cybersecurity & Digital Forensics",
-    skills: [
-      "Vulnerability Assessment & Management",
-      "Web Application Security Analysis",
-      "Threat Intelligence & Risk Assessment",
-      "Incident Response & Digital Forensics",
-      "Security Compliance & Governance",
-      "Security Operations Center",
-    ]
+    category: "Programming Languages",
+    skills: ["Python", "Bash", "JavaScript", "HTML", "SQL"],
+    icon: "💻"
   },
   {
-    category: "Software Development",
+    category: "Networking",
     skills: [
-      "Python",
-      "JavaScript/TypeScript",
-      "Java & C/C++",
-      "Django",
-      "RESTful API Design",
-      "Secure Coding Practices"
-    ]
+      "TCP/IP",
+      "DNS", 
+      "HTTP / HTTPS",
+      "Ports & Protocols",
+      "OSI Model",
+      "Network Traffic Analysis",
+      "Firewalls"
+    ],
+    icon: "🌐"
   },
   {
-    category: "Security Tools & Platforms",
+    category: "Digital Forensics",
     skills: [
-      "Burp Suite Professional",
-      "Wireshark & Network Analysis",
-      "Nmap & Security Scanning",
-      "Metasploit Framework",
-      "SIEM Solutions",
-      "Git & Version Control",
-    ]
+      "Digital Evidence Handling",
+      "Disk Forensics",
+      "Memory Forensics",
+      "File System Analysis",
+      "Timeline Analysis",
+      "Artifact Analysis"
+    ],
+    icon: "🔍"
   },
+  {
+    category: "Cybersecurity & Digital Forensics Tools",
+    skills: [
+      "Autopsy",
+      "FTK Imager",
+      "Volatility",
+      "Wireshark",
+      "Nmap",
+      "Burp Suite"
+    ],
+    icon: "🛠️"
+  },
+  {
+    category: "Web Security",
+    skills: [
+      "OWASP Top 10",
+      "SQL Injection",
+      "Cross-Site Scripting (XSS)",
+      "Cross-Site Request Forgery (CSRF)",
+      "Broken Access Control",
+      "Insecure Authentication",
+      "Security Misconfiguration"
+    ],
+    icon: "🛡️"
+  },
+  {
+    category: "Operating Systems",
+    skills: [
+      "Linux",
+      "Windows",
+      "File Permissions",
+      "Process Analysis",
+      "Service Analysis",
+      "Log Analysis"
+    ],
+    icon: "⚙️"
+  },
+  {
+    category: "Security Concepts",
+    skills: [
+      "CIA Triad",
+      "Threat Modeling",
+      "Vulnerability Assessment",
+      "Risk Analysis",
+      "Attack Surface",
+      "Defense in Depth"
+    ],
+    icon: "🎯"
+  },
+  {
+    category: "Cryptography & Authentication",
+    skills: [
+      "Hashing",
+      "Salting",
+      "Encryption Concepts",
+      "Authentication Mechanisms",
+      "Session Management"
+    ],
+    icon: "🔐"
+  },
+  {
+    category: "Platforms & Practice",
+    skills: [
+      "TryHackMe",
+      "Hack The Box",
+      "Capture The Flag (CTF)"
+    ],
+    icon: "🏆"
+  },
+  {
+    category: "Professional Skills",
+    skills: [
+      "Technical Documentation",
+      "Incident Reporting",
+      "Analytical Thinking",
+      "Problem Solving"
+    ],
+    icon: "📋"
+  }
 ];
 
 export const EXPERIENCE = [
