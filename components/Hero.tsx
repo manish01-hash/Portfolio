@@ -12,7 +12,11 @@ const Hero: React.FC<HeroProps> = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-start justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-cyber-black pt-20">
+    <section
+  id="home"
+  className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-cyber-black"
+>
+
       {/* Animated Background */}
   {/* Background */}
   <div className="absolute inset-0 z-0">
