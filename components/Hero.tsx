@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-accent/10 rounded-full blur-[100px] animate-float animation-delay-2000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-12 py-20">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-12 py-20">
         {/* Left Column - Content */}
         <div className="w-full lg:w-7/12 text-left">
           <motion.div 
