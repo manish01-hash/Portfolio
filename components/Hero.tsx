@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Lock, ShieldCheck, Code } from 'lucide-react';
+import { ArrowRight, Download, Lock, ShieldCheck, Terminal, ChevronRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { motion } from 'framer-motion';
 
@@ -11,10 +11,18 @@ const Hero: React.FC<HeroProps> = () => {
     target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(PERSONAL_INFO.name || '')}&background=1a1a1a&color=10b981&size=512`;
   };
 
+  // Skills data
+  const skills = [
+    "Network Security",
+    "Ethical Hacking", 
+    "Cloud Security",
+    "Threat Analysis"
+  ];
+
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-900 to-black"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -22,16 +30,27 @@ const Hero: React.FC<HeroProps> = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         
         {/* Animated Glow Effects */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyber-primary/5 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-cyber-accent/5 blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyber-primary/10 blur-[160px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-cyber-accent/10 blur-[160px] animate-pulse delay-1000" />
         
-        {/* Binary Code Animation */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        {/* Binary Code Animation - Right Side */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03]">
             <div className="absolute top-0 left-0 w-full h-full font-mono text-xs text-cyber-primary whitespace-pre animate-scroll">
-              {Array.from({ length: 100 }).map((_, i) => (
-                <div key={i} className="tracking-widest">
-                  01001001 00100000 01100001 01101101 00100000 01001101 01100001 01101110 01101001 01110011 01101000 00100000 01000100 01101000 01100001 01111001 01100111 01110101 01100100 01100101
+              {Array.from({ length: 50 }).map((_, i) => (
+                <div key={i} className="tracking-widest text-right pr-8">
+                  01101101 01100001 01101110 01101001 01110011 01101000 00100000 01100100 01101000 01100001 01111001 01100111 01110101 01100100 01100101
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Left Side Binary */}
+          <div className="absolute top-0 left-0 w-1/3 h-full opacity-[0.03]">
+            <div className="absolute top-0 left-0 w-full h-full font-mono text-xs text-cyber-accent whitespace-pre animate-scroll-reverse">
+              {Array.from({ length: 50 }).map((_, i) => (
+                <div key={i} className="tracking-widest pl-8">
+                  01010011 01000101 01000011 01010101 01010010 01001001 01010100 01011001 00100000 01010000 01010010 01001111 01000110 01000101 01010011 01010011 01001001 01001111 01001110 01000001 01001100
                 </div>
               ))}
             </div>
@@ -41,7 +60,7 @@ const Hero: React.FC<HeroProps> = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           
           {/* Left Column - Text Content */}
           <div className="lg:w-1/2">
@@ -49,7 +68,7 @@ const Hero: React.FC<HeroProps> = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-cyber-primary/30 rounded-full px-4 py-2 mb-8"
+              className="inline-flex items-center space-x-2 bg-gray-900/80 backdrop-blur-sm border border-cyber-primary/30 rounded-full px-4 py-2 mb-8"
             >
               <div className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-primary opacity-75"></span>
@@ -84,7 +103,7 @@ const Hero: React.FC<HeroProps> = () => {
                 {PERSONAL_INFO.summary}
               </p>
               
-              <div className="inline-block bg-gray-900/50 backdrop-blur-sm border-l-4 border-cyber-primary px-6 py-4 rounded-r-lg">
+              <div className="inline-block bg-gray-900/80 backdrop-blur-sm border-l-4 border-cyber-primary px-6 py-4 rounded-r-lg">
                 <p className="text-cyber-primary font-mono text-sm md:text-base tracking-wide">
                   {PERSONAL_INFO.tagline}
                 </p>
@@ -93,18 +112,18 @@ const Hero: React.FC<HeroProps> = () => {
 
             {/* CTAs */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <a 
                 href="#contact" 
-                className="group relative flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyber-primary to-cyber-accent text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-cyber-primary/30"
+                className="group relative flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyber-primary to-cyber-accent text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-cyber-primary/30 hover:-translate-y-0.5"
               >
                 <span className="relative z-10 flex items-center">
                   Get In Touch
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
               </a>
@@ -112,7 +131,7 @@ const Hero: React.FC<HeroProps> = () => {
               <a
                 href="/Resume.pdf"
                 download
-                className="group flex items-center justify-center px-8 py-4 border border-cyber-primary/30 text-white font-medium rounded-lg bg-gray-900/50 backdrop-blur-sm hover:bg-gray-800/50 transition-all duration-300 hover:border-cyber-primary/60"
+                className="group flex items-center justify-center px-8 py-4 border border-cyber-primary/40 text-white font-medium rounded-lg bg-gray-900/80 backdrop-blur-sm hover:bg-gray-800/80 transition-all duration-300 hover:border-cyber-primary/80 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyber-primary/20"
               >
                 <span>View Resume</span>
                 <Download className="ml-2 h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
@@ -130,7 +149,7 @@ const Hero: React.FC<HeroProps> = () => {
                 href="https://github.com/manish01-hash"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-cyber-primary hover:bg-gray-800/50 transition-all duration-300 group"
+                className="p-3 rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700 hover:border-cyber-primary hover:bg-gray-800/80 transition-all duration-300 group hover:-translate-y-0.5"
                 aria-label="GitHub"
               >
                 <svg className="h-6 w-6 text-gray-400 group-hover:text-cyber-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -141,7 +160,7 @@ const Hero: React.FC<HeroProps> = () => {
                 href="https://www.linkedin.com/in/manishdhaygude/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-700 hover:border-blue-500 hover:bg-gray-800/50 transition-all duration-300 group"
+                className="p-3 rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700 hover:border-blue-500 hover:bg-gray-800/80 transition-all duration-300 group hover:-translate-y-0.5"
                 aria-label="LinkedIn"
               >
                 <svg className="h-6 w-6 text-gray-400 group-hover:text-blue-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -149,55 +168,86 @@ const Hero: React.FC<HeroProps> = () => {
                 </svg>
               </a>
               <div className="h-4 w-px bg-gray-700" />
-              <span className="text-sm text-gray-500 font-mono">
+              <span className="text-sm text-gray-400 font-mono tracking-wide">
                 Connect with me
               </span>
             </motion.div>
           </div>
 
-          {/* Right Column - Placeholder for Image/Visual */}
+          {/* Right Column - Terminal Section */}
           <motion.div 
             className="lg:w-1/2 flex justify-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="relative w-full max-w-lg">
-              <div className="relative rounded-2xl overflow-hidden border border-gray-800 bg-gradient-to-br from-gray-900 to-black p-8">
-                {/* Cybersecurity Visual Elements */}
-                <div className="absolute top-4 right-4">
-                  <ShieldCheck className="h-8 w-8 text-cyber-primary animate-pulse" />
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <Lock className="h-8 w-8 text-cyber-accent" />
-                </div>
+              {/* Main Terminal Card */}
+              <div className="relative rounded-2xl overflow-hidden border border-gray-800 bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm p-6 lg:p-8 shadow-2xl shadow-black/50">
                 
-                {/* Terminal-like display */}
-                <div className="bg-gray-950 rounded-lg p-6 border border-gray-800">
-                  <div className="flex items-center space-x-2 mb-4">
+                {/* Header Bar */}
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-800">
+                  <div className="flex items-center space-x-2">
                     <div className="h-3 w-3 rounded-full bg-red-500"></div>
                     <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
                     <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                    <span className="text-sm text-gray-500 font-mono ml-4">terminal</span>
+                    <span className="text-sm text-gray-400 font-mono ml-3 tracking-wide">terminal</span>
                   </div>
-                  <div className="font-mono text-sm space-y-2">
-                    <div className="text-cyber-primary">
-                      <span className="text-green-400">$</span> whoami
-                    </div>
-                    <div className="text-gray-300">{PERSONAL_INFO.name.split(' ')[0].toLowerCase()}</div>
-                    <div className="text-cyber-primary mt-4">
-                      <span className="text-green-400">$</span> cat skills.txt
-                    </div>
-                    <div className="text-gray-300 grid grid-cols-2 gap-2 mt-2">
-                      <span className="text-cyber-accent">›</span> <span>Network Security</span>
-                      <span className="text-cyber-accent">›</span> <span>Ethical Hacking</span>
-                      <span className="text-cyber-accent">›</span> <span>Cloud Security</span>
-                      <span className="text-cyber-accent">›</span> <span>Threat Analysis</span>
-                    </div>
-                    <div className="text-cyber-primary mt-4">
-                      <span className="text-green-400">$</span> <span className="animate-pulse">█</span>
-                    </div>
+                  <Terminal className="h-5 w-5 text-cyber-primary/60" />
+                </div>
+                
+                {/* Terminal Content */}
+                <div className="font-mono space-y-4 text-sm lg:text-base">
+                  {/* whoami command */}
+                  <div className="flex items-start space-x-2">
+                    <span className="text-green-400 flex-shrink-0">$</span>
+                    <span className="text-cyber-primary">whoami</span>
                   </div>
+                  <div className="text-gray-300 ml-6">{PERSONAL_INFO.name.split(' ')[0].toLowerCase()}</div>
+                  
+                  {/* Skills command */}
+                  <div className="flex items-start space-x-2 mt-6">
+                    <span className="text-green-400 flex-shrink-0">$</span>
+                    <span className="text-cyber-primary">cat skills.txt</span>
+                  </div>
+                  
+                  {/* Skills list */}
+                  <div className="ml-6 mt-3 space-y-2">
+                    {skills.map((skill, index) => (
+                      <div key={index} className="flex items-center space-x-2 group">
+                        <span className="text-cyber-accent">›</span>
+                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                          {skill}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Cursor */}
+                  <div className="flex items-center space-x-2 mt-8">
+                    <span className="text-green-400">$</span>
+                    <div className="h-5 w-3 bg-cyber-primary animate-pulse"></div>
+                  </div>
+                </div>
+                
+                {/* Decorative Icons */}
+                <div className="absolute top-4 right-4">
+                  <ShieldCheck className="h-6 w-6 text-cyber-primary/40" />
+                </div>
+                <div className="absolute bottom-4 left-4">
+                  <Lock className="h-6 w-6 text-cyber-accent/40" />
+                </div>
+              </div>
+              
+              {/* Stats Bar */}
+              <div className="mt-6 flex items-center justify-between text-xs text-gray-500 font-mono px-2">
+                <div className="flex items-center space-x-2">
+                  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <span>STATUS: ACTIVE</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span>SECURE</span>
+                  <span>ENCRYPTED</span>
                 </div>
               </div>
             </div>
@@ -213,8 +263,8 @@ const Hero: React.FC<HeroProps> = () => {
         transition={{ delay: 1 }}
       >
         <div className="flex flex-col items-center">
-          <span className="text-xs text-gray-500 font-mono mb-2">SCROLL</span>
-          <div className="w-px h-12 bg-gradient-to-b from-cyber-primary to-transparent animate-bounce" />
+          <span className="text-xs text-gray-500 font-mono mb-2 tracking-widest">SCROLL</span>
+          <div className="w-px h-12 bg-gradient-to-b from-cyber-primary via-cyber-accent to-transparent animate-bounce" />
         </div>
       </motion.div>
     </section>
