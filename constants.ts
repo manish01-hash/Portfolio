@@ -25,8 +25,10 @@ export const SKILLS = [
       "HTTP / HTTPS",
       "Ports & Protocols",
       "OSI Model",
+      "Network Monitoring",
       "Network Traffic Analysis",
-      "Firewalls"
+      "Firewalls",
+      "Virtualization",
     ],
     icon: "🌐"
   },
