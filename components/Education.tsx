@@ -114,44 +114,49 @@ const Education: React.FC = () => {
                       <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse"></div>
                     </div>
                     
-                    {/* Education Card */}
+                    {/* Education Card - REMOVED PR-20 to fix overlapping */}
                     <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 group-hover:border-cyber-primary/40 transition-all duration-300 overflow-hidden">
-                      {/* Year Badge */}
-                      <div className="absolute top-4 right-4">
-                        <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-full">
-                          <Calendar className="w-3 h-3 text-cyber-primary" />
-                          <span className="text-sm font-mono text-cyber-primary">{edu.year}</span>
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                        {/* Course/Degree Name */}
+                        <div className="flex-1">
+                          <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors duration-300">
+                            {edu.degree}
+                          </h4>
+                          
+                          {/* Institution Name */}
+                          <div className="flex flex-wrap items-center gap-3 text-gray-300">
+                            <div className="flex items-center space-x-1">
+                              <GraduationCap className="w-4 h-4 text-cyber-primary/80" />
+                              <span className="font-medium">{edu.institution}</span>
+                            </div>
+                            <div className="hidden md:block w-px h-4 bg-gray-700"></div>
+                            <div className="flex items-center space-x-1">
+                              <MapPin className="w-4 h-4 text-cyber-primary/80" />
+                              <span>{edu.location}</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Year Badge - Now positioned properly */}
+                        <div className="md:self-start">
+                          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-full">
+                            <Calendar className="w-3 h-3 text-cyber-primary" />
+                            <span className="text-sm font-mono text-cyber-primary">{edu.year}</span>
+                          </div>
                         </div>
                       </div>
                       
-                      <div className="pr-20">
-                        {/* Course/Degree Name (now on top) */}
-                        <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors duration-300">
-                          {edu.degree}
-                        </h4>
-                        
-                        {/* Institution Name (now below) */}
-                        <div className="flex items-center space-x-4 text-gray-300 mb-3">
-                          <div className="flex items-center space-x-1">
-                            <GraduationCap className="w-4 h-4 text-cyber-primary/80" />
-                            <span className="font-medium">{edu.institution}</span>
-                          </div>
-                          <div className="w-px h-4 bg-gray-700"></div>
-                          <div className="flex items-center space-x-1">
-                            <MapPin className="w-4 h-4 text-cyber-primary/80" />
-                            <span>{edu.location}</span>
-                          </div>
-                        </div>
-                        
+                      {/* Details and GPA */}
+                      <div>
                         {edu.details && (
-                          <p className="text-gray-400 leading-relaxed">
+                          <p className="text-gray-400 leading-relaxed mb-4">
                             {edu.details}
                           </p>
                         )}
                         
                         {/* GPA/Score if available */}
                         {edu.gpa && (
-                          <div className="mt-4 inline-flex items-center space-x-2 px-4 py-2 bg-gray-800/50 rounded-lg">
+                          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gray-800/50 rounded-lg">
                             <span className="text-sm text-gray-400">CGPA:</span>
                             <span className="text-cyber-primary font-bold">{edu.gpa}</span>
                           </div>
@@ -208,7 +213,7 @@ const Education: React.FC = () => {
                             <div className="p-3 bg-cyber-accent/10 rounded-lg group-hover:scale-110 transition-transform duration-300">
                               <CheckCircle className="w-6 h-6 text-cyber-accent" />
                             </div>
-                            <div>
+                            <div className="flex-1">
                               <h4 className="text-lg font-bold text-white group-hover:text-cyber-accent transition-colors duration-300">
                                 {cert.name}
                               </h4>
@@ -221,7 +226,7 @@ const Education: React.FC = () => {
                         
                         {/* Credential Info */}
                         <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800/50">
-                          <div className="flex items-center space-x-4">
+                          <div className="flex flex-wrap items-center gap-4">
                             {cert.credentialId && (
                               <div className="flex items-center space-x-2">
                                 <Shield className="w-4 h-4 text-gray-400" />
