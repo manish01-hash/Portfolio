@@ -14,15 +14,17 @@ const Hero: React.FC<HeroProps> = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-start justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-cyber-black pt-20">
       {/* Animated Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/[0.02] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-primary/10 rounded-full blur-[100px] animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-accent/10 rounded-full blur-[100px] animate-float animation-delay-2000"></div>
-      </div>
+  {/* Background */}
+  <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 bg-grid-white/[0.02]" />
+    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-primary/10 blur-[120px]" />
+    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-accent/10 blur-[120px]" />
+  </div>
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-12 py-20">
-        {/* Left Column - Content */}
-        <div className="w-full lg:w-7/12 text-left">
+  {/* Content */}
+  <div className="relative z-10 w-full px-6 lg:px-28 xl:px-36 pt-32">
+    <div className="max-w-3xl">
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
