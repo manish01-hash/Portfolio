@@ -4,25 +4,48 @@ import { Calendar, MapPin, ExternalLink, Terminal, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Experience: React.FC = () => {
+  // Generate binary data for background
+  const binaryLines = Array.from({ length: 40 }).map((_, i) => 
+    "01001000 01011001 01000100 01010010 01000001 00100000 01010100 01001111 01001111 01001100 00100000 01010000 01010010 01001111 01001010 01000101 01000011 01010100"
+  );
+
   return (
     <section id="experience" className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Grid Pattern */}
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         
         {/* Animated Glow Effects */}
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-cyber-primary/5 blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-cyber-accent/5 blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyber-primary/10 blur-[160px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-cyber-accent/10 blur-[160px] animate-pulse delay-1000" />
         
-        {/* Binary Code Background */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0 font-mono text-xs text-cyber-primary whitespace-pre animate-scroll-slow">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="tracking-widest">
-                01001000 01011001 01000100 01010010 01000001 00100000 01010100 01001111 01001111 01001100
-              </div>
-            ))}
+        {/* Fixed Binary Code Background - Full Coverage */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+          {/* Left Side Binary */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-0 left-0 w-full h-full font-mono text-xs text-cyber-primary whitespace-pre animate-scroll-slow">
+              {binaryLines.map((line, i) => (
+                <div key={`left-${i}`} className="tracking-widest opacity-70">
+                  {line}
+                </div>
+              ))}
+            </div>
           </div>
+          
+          {/* Right Side Binary */}
+          <div className="absolute top-0 right-0 w-full h-full">
+            <div className="absolute top-0 right-0 w-full h-full font-mono text-xs text-cyber-accent whitespace-pre animate-scroll-slow-reverse">
+              {binaryLines.map((line, i) => (
+                <div key={`right-${i}`} className="tracking-widest text-right pr-8 opacity-70">
+                  {line}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Overlay to ensure full coverage */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"></div>
         </div>
       </div>
 
@@ -52,7 +75,7 @@ const Experience: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden"
+          className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden"
         >
           {/* Card Header */}
           <div className="p-8 border-b border-gray-800">
@@ -66,7 +89,7 @@ const Experience: React.FC = () => {
                   <span className="text-gray-400">•</span>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4 text-cyber-primary/80" />
-                    <span className="text-sm">Jul 2023 - Aug 2023 · 1 months</span>
+                    <span className="text-sm">Jul 2023 - Aug 2023 · 1 month</span>
                   </div>
                 </div>
               </div>
