@@ -66,7 +66,7 @@ const Experience: React.FC = () => {
                   <span className="text-gray-400">•</span>
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4 text-cyber-primary/80" />
-                    <span className="text-sm">Jul 2023 - Aug 2023 · 2 months</span>
+                    <span className="text-sm">Jul 2023 - Aug 2023 · 1 months</span>
                   </div>
                 </div>
               </div>
