@@ -47,13 +47,12 @@ export const SKILLS: SkillCategory[] = [
   },
 ];
 
-export const EXPERIENCE: Experience[] = [
+export const EXPERIENCE = [
   {
-    company: "Coincent.ai",
     role: "Cyber Security and Ethical Hacking Intern",
-    period: "Jul 2023 - Aug 2023 · 2 mos",
-    location: "Remote",
-    project: "System Hacking",
+    company: "Concent.ai",
+    period: "Jul 2023 - Aug 2023 · 2 months",
+    location: "Virtual • Remote",
     description: [
       "Completed a virtual project-based internship focused on penetration testing and password security",
       "Specialized in using the Hydra tool for comprehensive brute-force attack simulations",
