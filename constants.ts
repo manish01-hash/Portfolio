@@ -15,24 +15,21 @@ export const SKILLS: SkillCategory[] = [
   {
     category: "Cybersecurity & Digital Forensics",
     skills: [
-      "Advanced Penetration Testing",
       "Vulnerability Assessment & Management",
       "Web Application Security Analysis",
       "Threat Intelligence & Risk Assessment",
       "Incident Response & Digital Forensics",
       "Security Compliance & Governance",
-      "Remediation Strategy Development"
+      "Security Operations Center",
     ]
   },
   {
     category: "Software Development",
     skills: [
-      "Python (Advanced)",
+      "Python",
       "JavaScript/TypeScript",
       "Java & C/C++",
-      "React.js & Next.js",
-      "Django & Flask",
-      "Node.js & Express",
+      "Django",
       "RESTful API Design",
       "Secure Coding Practices"
     ]
@@ -46,21 +43,8 @@ export const SKILLS: SkillCategory[] = [
       "Metasploit Framework",
       "SIEM Solutions",
       "Git & Version Control",
-      "Container Security"
     ]
   },
-  {
-    category: "Infrastructure & Cloud Security",
-    skills: [
-      "Linux/Unix System Administration",
-      "Network Architecture & Security",
-      "Cloud Security (AWS/Azure)",
-      "Containerization & Orchestration",
-      "Identity & Access Management",
-      "Database Security",
-      "Enterprise Security Architecture"
-    ]
-  }
 ];
 
 export const EXPERIENCE: Experience[] = [
