@@ -102,14 +102,16 @@ const Education: React.FC = () => {
                       </div>
                       
                       <div className="pr-20">
+                        {/* Course/Degree Name (now on top) */}
                         <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors duration-300">
-                          {edu.institution}
+                          {edu.degree}
                         </h4>
                         
+                        {/* Institution Name (now below) */}
                         <div className="flex items-center space-x-4 text-gray-300 mb-3">
                           <div className="flex items-center space-x-1">
                             <GraduationCap className="w-4 h-4 text-cyber-primary/80" />
-                            <span className="font-medium">{edu.degree}</span>
+                            <span className="font-medium">{edu.institution}</span>
                           </div>
                           <div className="w-px h-4 bg-gray-700"></div>
                           <div className="flex items-center space-x-1">
