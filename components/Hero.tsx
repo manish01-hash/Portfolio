@@ -110,65 +110,6 @@ const Hero: React.FC<HeroProps> = () => {
           </motion.div>
 
         </div>
-
-        {/* Right Column - Profile Image + Skills */}
-        {/* Right Column - Profile Image + Skills (improved balance) */}
-<div className="w-full lg:w-5/12 flex flex-col items-center lg:items-start gap-6 lg:gap-8">
-  {/* Avatar - smaller, shifted so cards align under heading */}
-  <motion.div
-    className="relative w-56 h-56 md:w-64 md:h-64 lg:w-56 lg:h-56"
-    initial={{ opacity: 0, scale: 0.98 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5, delay: 0.25, type: 'spring', stiffness: 120 }}
-  >
-    <div className="absolute inset-0 rounded-full border-4 border-cyber-primary/20"></div>
-    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-cyber-accent/10 bg-gradient-to-br from-cyber-black/40 to-transparent">
-      <img
-        src="/profile pic.jpeg"
-        alt={`${PERSONAL_INFO.name} avatar`}
-        className="w-full h-full object-cover"
-        onError={(e) => (e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(PERSONAL_INFO.name || '')}&background=1a1a1a&color=10b981&size=512`)}
-      />
-    </div>
-  </motion.div>
-
-  {/* Heading + Cards grouped tightly */}
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.45, delay: 0.35 }}
-    className="w-full max-w-md lg:max-w-sm"
-  >
-    <div className="flex flex-col mb-6">
-      <h3 className="text-2xl font-bold text-white mb-2">Areas of Expertise</h3>
-      <div className="w-20 h-1 bg-gradient-to-r from-cyber-primary to-cyber-accent rounded-full"></div>
-    </div>
-
-    {/* Cards grid — slightly larger cards, consistent heights */}
-    <div className="grid grid-cols-2 gap-4">
-      {[
-        { icon: <Lock className="w-6 h-6" />, text: "Penetration Testing" },
-        { icon: <ShieldCheck className="w-6 h-6" />, text: "Digital Forensics" },
-        { icon: <Code className="w-6 h-6" />, text: "Secure Coding" },
-        { icon: <div className="w-6 h-6 rounded border border-cyber-primary flex items-center justify-center text-xs font-bold">IP</div>, text: "Network Security" }
-      ].map((item, idx) => (
-        <div
-          key={idx}
-          className="flex items-center gap-4 p-4 min-h-[88px] rounded-xl bg-cyber-gray/50/ backdrop-blur-sm border border-gray-800/40 hover:translate-y-[-4px] transition-transform duration-200 hover:shadow-lg hover:shadow-cyber-primary/10"
-        >
-          <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-cyber-black/60 border border-cyber-primary/10">
-            {item.icon}
-          </div>
-          <div className="flex-1">
-            <p className="text-sm font-medium text-gray-200">{item.text}</p>
-            {/* optional: small subline - remove if you prefer clean look */}
-            {/* <p className="text-xs text-gray-400 mt-1">Describe a skill or tool</p> */}
-          </div>
-        </div>
-      ))}
-    </div>
-  </motion.div>
-</div>
         </div>
     </section>
   );
