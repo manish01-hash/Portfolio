@@ -4,25 +4,48 @@ import { GraduationCap, Award, CheckCircle, ExternalLink, Calendar, MapPin, Book
 import { motion } from 'framer-motion';
 
 const Education: React.FC = () => {
+  // Generate binary data for background
+  const binaryLines = Array.from({ length: 40 }).map((_, i) => 
+    "01000101 01000100 01010101 01000011 01000001 01010100 01001001 01001111 01001110 00100000 01000011 01000101 01010010 01010100 01001001 01000110 01001001 01000011 01000001 01010100 01000101 01010011"
+  );
+
   return (
     <section id="education" className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Grid Pattern */}
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
         
         {/* Animated Glow Effects */}
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-cyber-primary/10 blur-[160px] animate-pulse" />
         <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[600px] bg-cyber-accent/10 blur-[160px] animate-pulse delay-1000" />
         
-        {/* Binary Code Background */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0 font-mono text-xs text-cyber-primary whitespace-pre animate-scroll-slow">
-            {Array.from({ length: 30 }).map((_, i) => (
-              <div key={i} className="tracking-widest">
-                01000101 01000100 01010101 01000011 01000001 01010100 01001001 01001111 01001110 00100000 01000011 01000101 01010010 01010100 01001001 01000110 01001001 01000011 01000001 01010100 01000101 01010011
-              </div>
-            ))}
+        {/* Fixed Binary Code Background - Full Coverage */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+          {/* Left Side Binary */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-0 left-0 w-full h-full font-mono text-xs text-cyber-primary whitespace-pre animate-scroll-slow">
+              {binaryLines.map((line, i) => (
+                <div key={`left-${i}`} className="tracking-widest opacity-70">
+                  {line}
+                </div>
+              ))}
+            </div>
           </div>
+          
+          {/* Right Side Binary */}
+          <div className="absolute top-0 right-0 w-full h-full">
+            <div className="absolute top-0 right-0 w-full h-full font-mono text-xs text-cyber-accent whitespace-pre animate-scroll-slow-reverse">
+              {binaryLines.map((line, i) => (
+                <div key={`right-${i}`} className="tracking-widest text-right pr-8 opacity-70">
+                  {line}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Overlay to ensure full coverage */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"></div>
         </div>
       </div>
 
@@ -35,7 +58,7 @@ const Education: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center space-x-2 bg-gray-900/50 backdrop-blur-sm border border-cyber-primary/30 rounded-full px-4 py-2 mb-4">
+          <div className="inline-flex items-center space-x-2 bg-gray-900/80 backdrop-blur-sm border border-cyber-primary/30 rounded-full px-4 py-2 mb-4">
             <Book className="w-4 h-4 text-cyber-primary" />
             <span className="text-sm font-mono text-cyber-primary tracking-wider">
               ACADEMIC & CERTIFICATIONS
@@ -92,7 +115,7 @@ const Education: React.FC = () => {
                     </div>
                     
                     {/* Education Card */}
-                    <div className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 group-hover:border-cyber-primary/40 transition-all duration-300 overflow-hidden">
+                    <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 group-hover:border-cyber-primary/40 transition-all duration-300 overflow-hidden">
                       {/* Year Badge */}
                       <div className="absolute top-4 right-4">
                         <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-full">
@@ -175,7 +198,7 @@ const Education: React.FC = () => {
                     className="block group"
                   >
                     {/* Certificate Card */}
-                    <div className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 group-hover:border-cyber-accent/40 transition-all duration-300 overflow-hidden relative">
+                    <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 group-hover:border-cyber-accent/40 transition-all duration-300 overflow-hidden relative">
                       {/* Hover Effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-cyber-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       
@@ -234,7 +257,7 @@ const Education: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-6"
+              className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-2xl p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
                 <Book className="w-5 h-5 text-cyber-primary" />
