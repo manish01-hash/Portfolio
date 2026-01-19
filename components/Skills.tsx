@@ -111,12 +111,6 @@ const Skills: React.FC = () => {
                       <span className="text-xs font-mono text-gray-500">
                         {category.skills.length} skills
                       </span>
-                      <span className="text-gray-700">•</span>
-                      <div className="flex items-center space-x-1">
-                        {[...Array(3)].map((_, i) => (
-                          <div key={i} className="w-1.5 h-1.5 rounded-full bg-cyber-primary/50"></div>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -139,25 +133,12 @@ const Skills: React.FC = () => {
                     </motion.span>
                   ))}
                 </div>
-                
-                {/* Card Footer */}
-                <div className="mt-6 pt-4 border-t border-gray-800/50">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-gray-500">
-                      Click to explore
-                    </span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                      <span className="text-xs text-green-400 font-mono">Active</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Skills Summary */}
+        {/* Skills Summary - Simplified */}
         <motion.div 
           className="mt-16"
           initial={{ opacity: 0, y: 20 }}
@@ -166,26 +147,19 @@ const Skills: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyber-primary mb-2">
                   {SKILLS.reduce((total, category) => total + category.skills.length, 0)}+
                 </div>
-                <div className="text-gray-400 font-mono text-sm">Total Skills</div>
+                <div className="text-gray-400 font-mono text-sm">Technical Skills</div>
               </div>
               
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyber-accent mb-2">
                   {SKILLS.length}
                 </div>
-                <div className="text-gray-400 font-mono text-sm">Categories</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">
-                  100%
-                </div>
-                <div className="text-gray-400 font-mono text-sm">Security Focus</div>
+                <div className="text-gray-400 font-mono text-sm">Expertise Categories</div>
               </div>
             </div>
             
