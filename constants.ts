@@ -14,7 +14,7 @@ export const PERSONAL_INFO = {
 export const SKILLS = [
   {
     category: "Programming Languages",
-    skills: ["Python", "Bash", "JavaScript", "HTML", "SQL"],
+    skills: ["Python", "Bash", "JavaScript", "HTML", "CSS","SQL","C","JAVA"],
     icon: "💻"
   },
   {
