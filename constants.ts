@@ -55,13 +55,13 @@ export const EXPERIENCE: Experience[] = [
     location: "Remote",
     project: "System Hacking",
     description: [
-      "Conducted comprehensive analysis of vulnerabilities across various operating systems and security protocols.",
-      "Performed penetration testing and vulnerability assessments to identify potential exploit points.",
-      "Simulated cyber attacks to test system defenses and identify security weaknesses.",
-      "Documented findings and provided recommendations to enhance system security measures.",
-      "Gained hands-on experience in ethical hacking techniques and cybersecurity defense strategies.",
-      "Focused on preventing unauthorized access through systematic security testing and analysis."
-    ]
+      "Completed a virtual project-based internship focused on penetration testing and password security",
+      "Specialized in using the Hydra tool for comprehensive brute-force attack simulations",
+      "Conducted password strength testing and vulnerability assessments on test systems",
+      "Analyzed attack methodologies to understand security weaknesses in authentication systems",
+      "Documented findings and provided recommendations for improving password security"
+    ],
+    skills: ["Hydra Tool", "Password Security", "Brute-force Attacks", "Penetration Testing", "Vulnerability Assessment"]
   }
 ];
 
