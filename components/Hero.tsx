@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = () => {
             </a>
             <div className="flex items-center space-x-4">
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 download
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyber-primary hover:bg-cyber-primary/90 transition-all duration-200 group"
               >
