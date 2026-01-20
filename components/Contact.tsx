@@ -246,54 +246,53 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-6">
-                <motion.a 
-                  href={`mailto:${PERSONAL_INFO.email}`}
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
-                >
-                  <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-                    <Mail className="w-6 h-6 text-cyber-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 font-mono">Email</p>
-                    <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
-                      {PERSONAL_INFO.email}
-                    </p>
-                  </div>
-                </motion.a>
+  <motion.a 
+    href={`mailto:${PERSONAL_INFO.email}`}
+    whileHover={{ scale: 1.02 }}
+    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+  >
+    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+      <Mail className="w-6 h-6 text-cyber-primary" />
+    </div>
+    <div className="flex-1 min-w-0">
+      <p className="text-sm text-gray-500 font-mono">Email</p>
+      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300 break-all sm:break-words">
+        {PERSONAL_INFO.email}
+      </p>
+    </div>
+  </motion.a>
 
-                <motion.a 
-                  href={`tel:${PERSONAL_INFO.phone}`}
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
-                >
-                  <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-                    <Phone className="w-6 h-6 text-cyber-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 font-mono">Phone</p>
-                    <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
-                      {PERSONAL_INFO.phone}
-                    </p>
-                  </div>
-                </motion.a>
+  <motion.a 
+    href={`tel:${PERSONAL_INFO.phone}`}
+    whileHover={{ scale: 1.02 }}
+    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+  >
+    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+      <Phone className="w-6 h-6 text-cyber-primary" />
+    </div>
+    <div className="flex-1 min-w-0">
+      <p className="text-sm text-gray-500 font-mono">Phone</p>
+      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
+        {PERSONAL_INFO.phone}
+      </p>
+    </div>
+  </motion.a>
 
-                <motion.div 
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
-                >
-                  <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-                    <MapPin className="w-6 h-6 text-cyber-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 font-mono">Location</p>
-                    <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
-                      {PERSONAL_INFO.location}
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
+  <motion.div 
+    whileHover={{ scale: 1.02 }}
+    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+  >
+    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+      <MapPin className="w-6 h-6 text-cyber-primary" />
+    </div>
+    <div className="flex-1 min-w-0">
+      <p className="text-sm text-gray-500 font-mono">Location</p>
+      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
+        {PERSONAL_INFO.location}
+      </p>
+    </div>
+  </motion.div>
+</div>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
