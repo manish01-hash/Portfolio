@@ -225,235 +225,236 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
-          {/* Contact Information */}
-          <motion.div 
-            className="space-y-8"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl group hover:border-cyber-primary/40 transition-all duration-300">
-              <div className="flex items-center space-x-3 mb-8">
-                <div className="p-3 bg-cyber-primary/10 rounded-lg">
-                  <Globe className="w-8 h-8 text-cyber-primary" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Contact Information</h3>
-                  <p className="text-gray-400 text-sm">Secure communication channels</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-  <motion.a 
-    href={`mailto:${PERSONAL_INFO.email}`}
-    whileHover={{ scale: 1.02 }}
-    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
-  >
-    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-      <Mail className="w-6 h-6 text-cyber-primary" />
-    </div>
-    <div className="flex-1 min-w-0">
-      <p className="text-sm text-gray-500 font-mono">Email</p>
-      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300 break-all sm:break-words">
-        {PERSONAL_INFO.email}
-      </p>
-    </div>
-  </motion.a>
-
-  <motion.a 
-    href={`tel:${PERSONAL_INFO.phone}`}
-    whileHover={{ scale: 1.02 }}
-    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
-  >
-    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-      <Phone className="w-6 h-6 text-cyber-primary" />
-    </div>
-    <div className="flex-1 min-w-0">
-      <p className="text-sm text-gray-500 font-mono">Phone</p>
-      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
-        {PERSONAL_INFO.phone}
-      </p>
-    </div>
-  </motion.a>
-
+  
+  {/* Contact Information */}
   <motion.div 
-    whileHover={{ scale: 1.02 }}
-    className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+    className="space-y-8"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
   >
-    <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
-      <MapPin className="w-6 h-6 text-cyber-primary" />
+    <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl group hover:border-cyber-primary/40 transition-all duration-300">
+      <div className="flex items-center space-x-3 mb-8">
+        <div className="p-3 bg-cyber-primary/10 rounded-lg">
+          <Globe className="w-8 h-8 text-cyber-primary" />
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold text-white">Contact Information</h3>
+          <p className="text-gray-400 text-sm">Secure communication channels</p>
+        </div>
+      </div>
+
+      <div className="space-y-6">
+        <motion.a 
+          href={`mailto:${PERSONAL_INFO.email}`}
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+        >
+          <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+            <Mail className="w-6 h-6 text-cyber-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm text-gray-500 font-mono">Email</p>
+            <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300 break-all sm:break-words">
+              {PERSONAL_INFO.email}
+            </p>
+          </div>
+        </motion.a>
+
+        <motion.a 
+          href={`tel:${PERSONAL_INFO.phone}`}
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+        >
+          <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+            <Phone className="w-6 h-6 text-cyber-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm text-gray-500 font-mono">Phone</p>
+            <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
+              {PERSONAL_INFO.phone}
+            </p>
+          </div>
+        </motion.a>
+
+        <motion.div 
+          whileHover={{ scale: 1.02 }}
+          className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-300 group/item"
+        >
+          <div className="p-3 bg-cyber-primary/10 rounded-lg group-hover/item:bg-cyber-primary/20 transition-all duration-300">
+            <MapPin className="w-6 h-6 text-cyber-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm text-gray-500 font-mono">Location</p>
+            <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
+              {PERSONAL_INFO.location}
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </div>
-    <div className="flex-1 min-w-0">
-      <p className="text-sm text-gray-500 font-mono">Location</p>
-      <p className="text-lg text-white group-hover/item:text-cyber-primary transition-colors duration-300">
-        {PERSONAL_INFO.location}
+    
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="bg-gradient-to-r from-cyber-primary/5 via-transparent to-cyber-accent/5 border border-gray-800 p-8 rounded-2xl backdrop-blur-sm"
+    >
+      <p className="text-gray-300 italic text-lg leading-relaxed">
+        "Security is not a product, but a process."
       </p>
-    </div>
+      <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800/50">
+        <p className="text-cyber-primary font-mono text-sm">- Bruce Schneier</p>
+        <div className="text-xs px-3 py-1 bg-cyber-primary/10 text-cyber-primary rounded-full">
+          CYBER WISDOM
+        </div>
+      </div>
+    </motion.div>
+  </motion.div>
+
+  {/* Contact Form */}
+  <motion.div 
+    className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+      </div>
+      
+      <div>
+        <label htmlFor="subject" className="block text-sm font-medium text-gray-200 mb-2">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
+          placeholder="What is this regarding?"
+          required
+        />
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-200 mb-2">Phone (optional)</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
+            placeholder="Your phone number"
+          />
+        </div>
+        <div>
+          <label htmlFor="location" className="block text-sm font-medium text-gray-200 mb-2">Location (optional)</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
+            placeholder="Your location"
+          />
+        </div>
+      </div>
+      
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows={4}
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300 resize-none"
+          placeholder="Type your message here..."
+          required
+        ></textarea>
+      </div>
+
+      {formStatus === 'error' && (
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-red-900/30 border border-red-800 text-red-200 px-4 py-3 rounded-xl flex items-start space-x-3"
+        >
+          <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+          <span>{errorMessage || 'Failed to send message. Please try again.'}</span>
+        </motion.div>
+      )}
+      
+      {formStatus === 'success' ? (
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-green-900/30 border border-green-800 text-green-200 px-4 py-3 rounded-xl flex items-center space-x-3"
+        >
+          <Check className="w-5 h-5" />
+          <span>Message sent successfully! I'll get back to you soon.</span>
+        </motion.div>
+      ) : (
+        <motion.button 
+          type="submit" 
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="w-full bg-gradient-to-r from-cyber-primary to-cyber-accent text-cyber-black font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-cyber-primary/20 transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-70 disabled:cursor-not-allowed"
+          disabled={formStatus === 'sending'}
+        >
+          {formStatus === 'sending' ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin" />
+              <span>Encrypting & Sending...</span>
+            </>
+          ) : (
+            <>
+              <span>Send Secure Message</span>
+              <Send className="w-4 h-4" />
+            </>
+          )}
+        </motion.button>
+      )}
+      
+      <p className="text-xs text-gray-500 text-center pt-4">
+        This form uses end-to-end encryption. Your message is secure.
+      </p>
+    </form>
   </motion.div>
 </div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-r from-cyber-primary/5 via-transparent to-cyber-accent/5 border border-gray-800 p-8 rounded-2xl backdrop-blur-sm"
-            >
-              <p className="text-gray-300 italic text-lg leading-relaxed">
-                "Security is not a product, but a process."
-              </p>
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800/50">
-                <p className="text-cyber-primary font-mono text-sm">- Bruce Schneier</p>
-                <div className="text-xs px-3 py-1 bg-cyber-primary/10 text-cyber-primary rounded-full">
-                  CYBER WISDOM
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div 
-            className="bg-gray-900/80 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-200 mb-2">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
-                  placeholder="What is this regarding?"
-                  required
-                />
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-200 mb-2">Phone (optional)</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
-                    placeholder="Your phone number"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-gray-200 mb-2">Location (optional)</label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300"
-                    placeholder="Your location"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyber-primary focus:ring-2 focus:ring-cyber-primary/20 transition-all duration-300 resize-none"
-                  placeholder="Type your message here..."
-                  required
-                ></textarea>
-              </div>
-
-              {formStatus === 'error' && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-red-900/30 border border-red-800 text-red-200 px-4 py-3 rounded-xl flex items-start space-x-3"
-                >
-                  <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>{errorMessage || 'Failed to send message. Please try again.'}</span>
-                </motion.div>
-              )}
-              
-              {formStatus === 'success' ? (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-green-900/30 border border-green-800 text-green-200 px-4 py-3 rounded-xl flex items-center space-x-3"
-                >
-                  <Check className="w-5 h-5" />
-                  <span>Message sent successfully! I'll get back to you soon.</span>
-                </motion.div>
-              ) : (
-                <motion.button 
-                  type="submit" 
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-cyber-primary to-cyber-accent text-cyber-black font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-cyber-primary/20 transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-70 disabled:cursor-not-allowed"
-                  disabled={formStatus === 'sending'}
-                >
-                  {formStatus === 'sending' ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Encrypting & Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Send Secure Message</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </motion.button>
-              )}
-              
-              <p className="text-xs text-gray-500 text-center pt-4">
-                This form uses end-to-end encryption. Your message is secure.
-              </p>
-            </form>
-          </motion.div>
-        </div>
       </div>
     </section>
   );
