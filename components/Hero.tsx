@@ -15,8 +15,8 @@ const Hero: React.FC<HeroProps> = () => {
   const skills = [
     "Network Security",
     "Ethical Hacking", 
-    "Cloud Security",
-    "Threat Analysis"
+    "Digital Forensics",
+    "Malware Analysis"
   ];
 
   return (
